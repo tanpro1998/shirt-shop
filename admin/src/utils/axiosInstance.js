@@ -2,7 +2,7 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 import dayjs from "dayjs";
 import jsCookie from "js-cookie";
-const BASE_URL = "https://flashshirt-admin.herokuapp.com/api/";
+const BASE_URL = "https://flashshirt-admin.herokuapp.com/api";
 // const BASE_URL = "http://localhost:5000/api";
 
 const KEY =
