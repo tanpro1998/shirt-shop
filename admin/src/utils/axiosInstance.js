@@ -5,7 +5,8 @@ import jsCookie from "js-cookie";
 const BASE_URL = "https://flashshirt-admin.herokuapp.com/api/";
 // const BASE_URL = "http://localhost:5000/api";
 
-const KEY = process.env.REACT_APP_STRIPE_SECRET_KEY;
+const KEY =
+  "sk_test_51JbgRzDrivpegEIzHQVZVQV1e6pSatsLAG3Zipwcr8jTFsHn2NQEdxxbLSmrnqRQDKdfDCgmJeKehyGEOEQAW2gd00vQ2A1bcr";
 const ACCESS_TOKEN = jsCookie.get("access");
 const REFRESH_TOKEN = jsCookie.get("refresh");
 
