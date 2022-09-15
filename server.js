@@ -10,10 +10,14 @@ import stripeRouter from "./routes/stripeRoute.js";
 import accessoriesRouter from "./routes/accessoriesRoute.js";
 import authRouter from "./routes/authRoute.js";
 import cookieParser from "cookie-parser";
+import path from "path";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 dotenv.config();
 
 connectDB();
