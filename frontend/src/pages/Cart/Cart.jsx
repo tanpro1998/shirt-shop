@@ -15,7 +15,6 @@ const Cart = () => {
   const { total } = useSelector((state) => state.cart);
   const [stripeToken, setStripeToken] = useState(null);
   const dispatch = useDispatch();
-  const STRIPE_KEY = process.env.REACT_APP_STRIPE_KEY;
 
   const onToken = (token) => {
     setStripeToken(token);
@@ -57,7 +56,7 @@ const Cart = () => {
                 description={`Your total is ${cart.total}`}
                 amount={cart.total}
                 token={onToken}
-                stripeKey={STRIPE_KEY}
+                stripeKey="pk_test_51JbgRzDrivpegEIzT1BfYsVfvpHhAreHjUGrTfxP2YE2HSpBnaxHFNJyCXvNlhYt9d3cb1Lb3wkLDN426ojSQi9v00l9qgE4oX"
               >
                 <button className="w-100 p-2 bg-blue color-white border-0">
                   Đặt hàng
