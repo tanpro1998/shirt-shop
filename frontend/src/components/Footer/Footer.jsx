@@ -10,10 +10,11 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footers">
       <div className=" bg-black color-white container p-5">
-        <Grid col={4} mdCol={2} smCol={1} gap={10}>
-          <div style={{ transform: "translate(100%, 5%)" }}>
+        <Grid col={4} mdCol={4} smCol={2} gap={10}>
+          <div className="footer">
+          <div>
             <div className="footer__title">Tổng đài hỗ trợ</div>
             <div className="footer__content">
               <p>
@@ -29,7 +30,7 @@ const Footer = () => {
           </div>
           <div
             className="footer__about"
-            style={{ transform: "translateX(100%)" }}
+            // style={{ transform: "translateX(100%)" }}
           >
             <p>
               <Link to="/">
@@ -63,6 +64,7 @@ const Footer = () => {
             <a href="https://www.youtube.com/c/MixiGamingofficial">
               <YoutubeOutlined className="icon" />
             </a>
+          </div>
           </div>
         </Grid>
       </div>
