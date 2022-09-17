@@ -14,10 +14,9 @@ import {
 } from "@material-ui/core";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
-const paperStyle = { padding: 20, width: 500, margin: "0 auto" };
+const paperStyle = { padding: 20, width: 400, margin: "0 auto" };
 const headerStyle = { margin: 0, fontWeight: "bold" };
 const typeStyle = { fontSize: 14 };
-
 
 const Register = () => {
   const navigate = useNavigate();
