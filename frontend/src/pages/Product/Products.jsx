@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addItemToCart } from "../../redux/cartSlice";
 import number from "../../utils/number";
+import { CheckOutlined } from "@ant-design/icons";
 
 const Product = () => {
   const { products } = useSelector((state) => state.products);
@@ -81,7 +82,11 @@ const Product = () => {
                         }
                   }`}
                         onClick={() => setColor(item)}
-                      ></div>
+                      >
+                        {color === item && (
+                          <CheckOutlined style={{ color: "crimson", fontSize: "24px" }} />
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>

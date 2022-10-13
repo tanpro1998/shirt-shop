@@ -11,7 +11,7 @@ import {
   FormHelperText,
 } from "@material-ui/core";
 
-const paperStyle = { padding: 20, width: 400, margin: "0 auto" };
+const paperStyle = { padding: 20, width: 600 };
 const headerStyle = { margin: 0, fontWeight: "bold" };
 const typeStyle = { fontSize: 14 };
 

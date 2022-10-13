@@ -1,7 +1,6 @@
 import React from "react";
 import Helmet from "../../components/Helmet/Helmet";
 import Slider from "../../components/Slide/Slider";
-import slideData from "../../assets/fake-data/slideData";
 import Section, {
   SectionTitle,
   SectionBody,
