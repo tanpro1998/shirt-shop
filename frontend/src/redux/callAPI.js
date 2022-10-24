@@ -68,7 +68,10 @@ export const userLogout = async () => {
 
 export const checkOut = async (reqObj) => {
   try {
-    await axios.post("https://flashshirt.herokuapp.com/api/checkout/payment", reqObj);
+    await axios.post(
+      "https://flashshirt.herokuapp.com/api/checkout/payment",
+      reqObj
+    );
     message.success("Thanh toán đơn hàng thành công!");
     setTimeout(() => {
       window.location.reload();

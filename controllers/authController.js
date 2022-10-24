@@ -6,7 +6,7 @@ import jsCookie from "js-cookie";
 export const register = async (req, res) => {
   const { name, username, password, cfpassword } = req.body;
   if (password !== cfpassword)
-    return res.status(400).json({ err: "Password does'nt mach" });
+    return res.status(400).json({ err: "Password does'nt match" });
   try {
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(password, salt);
