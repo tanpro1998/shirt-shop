@@ -4,7 +4,7 @@ import { Row, Col } from "antd";
 import Header from "../../components/Header/Header";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addItemToCart } from "../../redux/cartSlice";
+import { addToCart } from "../../redux/cartSlice";
 import number from "../../utils/number";
 import { CheckOutlined } from "@ant-design/icons";
 
@@ -40,7 +40,7 @@ const Product = () => {
 
   const handleClick = () => {
     if (check()) {
-      dispatch(addItemToCart({ ...product, quantity, size, color }));
+      dispatch(addToCart({ ...product, quantity, size, color }));
     }
   };
 
@@ -84,7 +84,9 @@ const Product = () => {
                         onClick={() => setColor(item)}
                       >
                         {color === item && (
-                          <CheckOutlined style={{ color: "crimson", fontSize: "24px" }} />
+                          <CheckOutlined
+                            style={{ color: "crimson", fontSize: "24px" }}
+                          />
                         )}
                       </div>
                     ))}

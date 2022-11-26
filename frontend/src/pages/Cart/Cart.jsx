@@ -10,11 +10,17 @@ import { resetCart } from "../../redux/cartSlice";
 import number from "../../utils/number";
 
 const Cart = () => {
-  const cart = useSelector((state) => state.cart);
-  const { quantity } = useSelector((state) => state.cart);
-  const { total } = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart.cartItems);
   const [stripeToken, setStripeToken] = useState(null);
   const dispatch = useDispatch();
+
+  const totalPrice = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += Number(item.quantity) * item.price;
+    });
+    return total;
+  };
 
   const onToken = (token) => {
     setStripeToken(token);
@@ -39,11 +45,11 @@ const Cart = () => {
           <div className="cart__info ml-5 w-25">
             <div className="car__info__text">
               <p>
-                Số đơn hàng trong giỏ hàng: <b>{quantity}</b>
+                Số đơn hàng trong giỏ hàng: <b>{cart.length}</b>
               </p>
               <div className="car__info__text__price">
                 <span>
-                  Thành tiền: <b>{number(total)}</b> VND
+                  Thành tiền: <b>{number(totalPrice())}</b> VND
                 </span>
               </div>
             </div>

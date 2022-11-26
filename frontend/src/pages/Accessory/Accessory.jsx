@@ -4,7 +4,7 @@ import { Row, Col } from "antd";
 import Header from "../../components/Header/Header";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addItemToCart } from "../../redux/cartSlice";
+import { addToCart } from "../../redux/cartSlice";
 import number from "../../utils/number";
 
 const Accessory = () => {
@@ -41,7 +41,7 @@ const Accessory = () => {
 
   const handleClick = () => {
     if (check()) {
-      dispatch(addItemToCart({ ...accessory, quantity, size, color }));
+      dispatch(addToCart({ ...accessory, quantity, size, color }));
     }
   };
   return (
@@ -55,7 +55,7 @@ const Accessory = () => {
                 <img src={accessory.image01} alt="" />
               </div>
             </Col>
-            <Col lg={12} sm={24}>
+          <Col lg={12} sm={24}>
               <div className="products p-5">
                 <h1 className="products__title text-center">
                   {accessory.title}

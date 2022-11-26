@@ -20,7 +20,7 @@ const Header = () => {
   const headerRef = useRef("");
   const user = JSON.parse(localStorage.getItem("user"));
   const isAdmin = user?.isAdmin;
-  const { quantity } = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart.cartItems);
 
   const handleLogout = () => {
     userLogout();
@@ -100,7 +100,7 @@ const Header = () => {
                       justifyContent: "center",
                     }}
                   >
-                    {quantity}
+                    {cart.length}
                   </span>
                 </i>
               </Link>
